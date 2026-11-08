@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nails at Moi | Nail Studio</title>
+<meta name="description" content="Gel, acrylic and nail art. See prices and book your appointment online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --accent: #A83C62;
+    --ink: #3B1F2B;
+    --muted: #6B5560;
+    --bg: #FBF5F2;
+    --line: #EAD9DE;
+    --photo: #EBD3D9;
+    --photo-text: #5E3A48;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: 'DM Sans', system-ui, sans-serif; color: var(--ink); background: var(--bg); }
+  a { color: #8E2F52; } a:hover { color: #5E1E37; }
+  h1, h2, .serif { font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; }
+  h2 { margin: 0; font-size: clamp(2rem, 4vw, 2.8rem); }
+  .wrap { max-width: 1180px; margin: 0 auto; }
+  section { padding: 80px 24px; }
+  .lead { margin: 0; color: var(--muted); font-size: 1.05rem; line-height: 1.6; }
+  .stack { display: flex; flex-direction: column; gap: 40px; }
+  .intro { display: flex; flex-direction: column; gap: 12px; max-width: 640px; }
+
+  .btn { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 14px 26px; border-radius: 999px; font-weight: 500; text-decoration: none; }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-primary:hover { color: #fff; filter: brightness(0.92); }
+  .btn-outline { border: 1.5px solid var(--ink); color: var(--ink); }
+  .btn-outline:hover { color: var(--ink); background: #fff; }
+
+  header { max-width: 1180px; margin: 0 auto; padding: 20px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
+  .logo { font-family: 'DM Serif Display', Georgia, serif; font-size: 1.6rem; color: var(--ink); text-decoration: none; }
+  nav { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; font-size: 0.95rem; }
+  nav a:not(.btn) { color: var(--ink); text-decoration: none; }
+
+  .hero { display: flex; flex-wrap: wrap; gap: 48px; align-items: center; padding-top: 48px; }
+  .hero-text { flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 24px; }
+  .eyebrow { margin: 0; font-size: 0.85rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+  .hero h1 { margin: 0; font-size: clamp(2.6rem, 6vw, 4.4rem); line-height: 1.05; }
+  .hero-photos { flex: 1 1 380px; min-width: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .photo { background: var(--photo); border-radius: 24px; display: flex; align-items: flex-end; padding: 20px; font-size: 0.9rem; color: var(--photo-text); }
+  .photo img { width: 100%; height: 100%; object-fit: cover; border-radius: inherit; }
+  .tall { grid-row: span 2; min-height: 380px; }
+  .short { min-height: 182px; }
+
+  .services { background: #fff; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+  .card { border: 1px solid var(--line); border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 18px; }
+  .card h3 { margin: 0; font-size: 1.25rem; }
+  .row { display: flex; justify-content: space-between; gap: 16px; padding-bottom: 14px; border-bottom: 1px dashed var(--line); }
+  .row small { display: block; margin-top: 4px; font-size: 0.85rem; color: var(--muted); }
+  .price { font-weight: 700; white-space: nowrap; }
+
+  .gallery-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; }
+  .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+  .gallery .photo { aspect-ratio: 1 / 1; border-radius: 20px; }
+
+  .booking { background: var(--ink); color: var(--bg); }
+  .booking .lead { color: #E4D3D9; }
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+  .step { background: #4E2C3A; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px; }
+  .step .num { font-family: 'DM Serif Display', Georgia, serif; font-size: 2.4rem; color: #F2B8C8; }
+  .step h3 { margin: 0; font-size: 1.2rem; }
+  .step p { margin: 0; color: #E4D3D9; line-height: 1.6; }
+  .policy { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; border-top: 1px solid #6A4655; padding-top: 32px; }
+  .policy p { margin: 0; color: #E4D3D9; max-width: 620px; line-height: 1.6; }
+  .btn-light { background: var(--bg); color: var(--ink); font-weight: 700; }
+  .btn-light:hover { color: var(--ink); background: #fff; }
+
+  .visit { display: flex; flex-wrap: wrap; gap: 40px; }
+  .visit-text { flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 20px; }
+  .hours { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 24px; max-width: 360px; }
+  .hours span:nth-child(even) { font-weight: 500; }
+  .map { flex: 1 1 420px; min-width: 0; min-height: 320px; background: var(--photo); border-radius: 24px; display: flex; align-items: center; justify-content: center; color: var(--photo-text); overflow: hidden; }
+  .map iframe { width: 100%; height: 100%; min-height: 320px; border: 0; }
+  .btns { display: flex; flex-wrap: wrap; gap: 12px; }
+
+  footer { border-top: 1px solid var(--line); padding: 32px 24px; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; font-size: 0.9rem; color: var(--muted); }
+  footer .logo { font-size: 1.2rem; }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="logo" href="#top">Nails at Moi</a>
+  <nav aria-label="Main">
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#booking">How booking works</a>
+    <a href="#visit">Visit</a>
+    <a class="btn btn-primary" href="#booking">Book now</a>
+  </nav>
+</header>
+
+<main>
+  <section id="top">
+    <div class="wrap hero">
+      <div class="hero-text">
+        <p class="eyebrow">Nail studio · [Area], Johannesburg</p>
+        <h1>Beautiful nails, booked in under a minute.</h1>
+        <p class="lead" style="font-size:1.15rem;max-width:520px">Gel, acrylic and nail art by [Tech Name]. See prices, pick a time and secure your slot online — no waiting for DM replies.</p>
+        <div class="btns">
+          <a class="btn btn-primary" href="#booking">Book an appointment</a>
+          <!-- Replace 27XXXXXXXXX with the WhatsApp number in international format, no + or spaces -->
+          <a class="btn btn-outline" href="https://wa.me/27XXXXXXXXX" target="_blank" rel="noopener">
+            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>
+            WhatsApp us
+          </a>
+        </div>
+      </div>
+      <div class="hero-photos">
+        <!-- Swap each placeholder for <img src="images/hero.jpg" alt="..."> -->
+        <div class="photo tall">[Hero photo: signature set]</div>
+        <div class="photo short">[Photo: close-up]</div>
+        <div class="photo short" style="background:#F1E1E5">[Photo: studio]</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <div class="wrap stack">
+      <div class="intro">
+        <h2>Services &amp; prices</h2>
+        <p class="lead">Clear prices, so clients know exactly what to expect before they book.</p>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <h3>Gel</h3>
+          <div class="row"><div>Gel overlay (natural nails)<small>About 60 min</small></div><span class="price">[R price]</span></div>
+          <div class="row"><div>Gel toes<small>About 45 min</small></div><span class="price">[R price]</span></div>
+          <div class="row"><div>Gel removal<small>About 20 min</small></div><span class="price">[R price]</span></div>
+        </div>
+        <div class="card">
+          <h3>Acrylic</h3>
+          <div class="row"><div>Full set, short<small>About 90 min</small></div><span class="price">[R price]</span></div>
+          <div class="row"><div>Full set, long<small>About 120 min</small></div><span class="price">[R price]</span></div>
+          <div class="row"><div>Infill<small>About 75 min</small></div><span class="price">[R price]</span></div>
+        </div>
+        <div class="card">
+          <h3>Extras</h3>
+          <div class="row"><div>French tip<small>Add-on</small></div><span class="price">[R price]</span></div>
+          <div class="row"><div>Nail art (per nail)<small>Add-on</small></div><span class="price">[R price]</span></div>
+          <div class="row"><div>Chrome or ombré<small>Add-on</small></div><span class="price">[R price]</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="wrap stack">
+      <div class="gallery-head">
+        <h2>Recent work</h2>
+        <a href="https://instagram.com/" target="_blank" rel="noopener">More on Instagram @[handle]</a>
+      </div>
+      <div class="gallery">
+        <div class="photo">[Photo: French set]</div>
+        <div class="photo">[Photo: chrome]</div>
+        <div class="photo">[Photo: nail art]</div>
+        <div class="photo">[Photo: ombré]</div>
+        <div class="photo">[Photo: gel toes]</div>
+        <div class="photo">[Photo: long acrylic]</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="booking" class="booking">
+    <div class="wrap stack">
+      <div class="intro">
+        <h2>How booking works</h2>
+        <p class="lead">Three steps, done from your phone.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><span class="num">01</span><h3>Pick your service</h3><p>Browse the price list and choose what you want done.</p></div>
+        <div class="step"><span class="num">02</span><h3>Choose a time</h3><p>See open slots and pick one that suits you.</p></div>
+        <div class="step"><span class="num">03</span><h3>Pay a small deposit</h3><p>Secure the booking online. You get a confirmation on WhatsApp.</p></div>
+      </div>
+      <div class="policy">
+        <p>Deposit policy: a [R amount] deposit secures your slot and comes off your final bill. Cancel at least [24 hours] before for a full refund.</p>
+        <!-- Point this at the booking tool's link (e.g. Booksy, Fresha, Calendly) -->
+        <a class="btn btn-light" href="#booking">Choose a time</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit">
+    <div class="wrap visit">
+      <div class="visit-text">
+        <h2>Visit the studio</h2>
+        <p class="lead" style="line-height:1.7">[Street address]<br>[Suburb], Johannesburg</p>
+        <div class="hours">
+          <span>Tue – Fri</span><span>[hours]</span>
+          <span>Saturday</span><span>[hours]</span>
+          <span>Sun – Mon</span><span>Closed</span>
+        </div>
+        <div class="btns">
+          <a class="btn btn-primary" href="https://wa.me/27XXXXXXXXX" target="_blank" rel="noopener">WhatsApp [number]</a>
+          <a class="btn btn-outline" href="https://maps.google.com/" target="_blank" rel="noopener">Get directions</a>
+        </div>
+      </div>
+      <!-- Replace with a Google Maps embed iframe for the studio address -->
+      <div class="map">[Google Map embed]</div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="logo">Nails at Moi</span>
+    <span>Instagram @[handle] · TikTok @[handle]</span>
+    <span>Website by [Your Name]</span>
+  </div>
+</footer>
+
+</body>
+</html>
